@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Arcade do Caos</title>
+    <link rel="stylesheet" href="styledata.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SISTEMA DE CADASTRO</h1>
+        <p>Por favor, insira sua data de nascimento...</p>
+
+        <div class="box" id="boxDia">
+            <h3>DIA: <span id="diaDisplay">1</span></h3>
+            <button id="btnDia" onclick="adicionarDia()">+1 DIA</button>
+        </div>
+
+        <div class="box">
+            <h3>MÊS: <span id="mesDisplay">JAN</span></h3>
+            <button id="btnMes" onclick="travarDestravarMes()">TRAVAR MÊS</button>
+        </div>
+
+        <div class="box">
+            <h3>ANO: <span id="anoDisplay">____</span></h3>
+            <div id="tecladoCaotico"></div>
+            <button onclick="limparAno()" style="margin-top: 10px; background: red; color: white;">APAGAR ANO</button>
+        </div>
+
+        <button class="btn-salvar" onclick="salvarData()">💾 TENTAR SALVAR NO BANCO</button>
+    </div>
+
+    <script src="db.js"></script> 
+    <script src="controllerdata.js"></script>
+</body>
+</html>
